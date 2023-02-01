@@ -10,9 +10,11 @@ html {
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* height: 100vh; remove scrollbar */
 }
 
 .window--sketch-area {
@@ -34,4 +36,13 @@ body {
 
     background-color: gainsboro;
     border: 0.01rem dotted grey;
+}
+
+.button--new-grid {
+    margin-top: 1rem;
+}
+
+.button--new-grid > img {
+    width: 3rem;
+    height: auto;
 }
