@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1.5rem; /* resize the window--sketch-area with browser font size */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.window--sketch-area {
+    /* sizing for 16x16 tiles */
+    height: 25rem; 
+    width: 25rem;
+    margin: 3.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    border: 0.5rem solid black;
+}
+
+.window--sketch-area__tile {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: gainsboro;
+    border: 0.01rem dotted grey;
+}
