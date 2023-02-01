@@ -13,15 +13,13 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* height: 100vh; remove scrollbar */
 }
 
 .window--sketch-area {
     /* sizing for 16x16 tiles */
     height: 25rem; 
     width: 25rem;
-    margin: 3.5rem;
+    margin: 1.5rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -40,9 +38,13 @@ body {
 
 .button--new-grid {
     margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+
+    align-self: flex-end;
 }
 
 .button--new-grid > img {
-    width: 3rem;
+    width: 2rem;
     height: auto;
 }
