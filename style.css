@@ -13,6 +13,8 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+
+    background-color: cornsilk;
 }
 
 .window--sketch-area {
@@ -25,15 +27,17 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
 
-    border: 0.5rem solid black;
+    background-color: #B22222;
+    border: 0.5rem solid #B22222;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem grey;
 }
 
 .window--sketch-area__tile {
     width: 1.5rem;
     height: 1.5rem;
 
-    background-color: gainsboro;
-    border: 0.01rem dotted grey;
+    background-color: whitesmoke;
 }
 
 .tile-menu {

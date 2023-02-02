@@ -15,6 +15,15 @@ for (let i = 0; i < SKETCH_AREA_DIMENSIONS; i++)
 {
     const newTile = document.createElement('div');
     newTile.setAttribute('class', 'window--sketch-area__tile');
+    // set rounded borders to corner tiles
+    if (i == 0)
+        newTile.setAttribute('style', 'border-radius: 0.5rem 0 0 0;');
+    else if (i == 15)
+        newTile.setAttribute('style', 'border-radius: 0 0.5rem 0 0;');
+    else if (i == 240)
+        newTile.setAttribute('style', 'border-radius: 0 0 0 0.5rem;');
+    else if (i == 255)
+        newTile.setAttribute('style', 'border-radius: 0 0 0.5rem 0;');
     newTile.addEventListener('mouseover', (e) => {
         e.target.style.backgroundColor = selectedColor;
     });
