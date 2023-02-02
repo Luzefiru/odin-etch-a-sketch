@@ -1,5 +1,6 @@
 const SKETCH_AREA_DIMENSIONS = 16 * 16; // dimensions of the drawing space window, tightly coupled with .window--sketch-area dimensions, not responsive
-let selectedColor = 'black';
+let selectedColor = 'rgb(255, 255,255)';
+let oldSelectedColor = undefined, isRainbowMode = false; // storage variables to toggle on/off rainbow mode in toggleRainbowPen() function
 
 const sketchArea = document.querySelector('.window--sketch-area');
 const newGridButton = document.querySelector('.tile-menu__button--new-grid');
@@ -42,4 +43,32 @@ function colorPickerUI () {
  */
 function changePenColor (color) {
     selectedColor = color;
+}
+
+/**
+ * Toggles the Rainbow Pen mode.
+ */
+function toggleRainbowPen () {
+    if (!isRainbowMode) {
+        oldSelectedColor = selectedColor;
+
+        const sketchArea = document.querySelector('.window--sketch-area');
+        sketchArea.addEventListener('mousemove', randomizeSelectedColor);
+
+        isRainbowMode = true;
+    }
+    else {
+        const sketchArea = document.querySelector('.window--sketch-area');
+        sketchArea.removeEventListener('mousemove', randomizeSelectedColor);
+
+        selectedColor = oldSelectedColor;
+        isRainbowMode = false;
+    }
+}
+
+/**
+ * Randomizes the current {selectedColor}.
+ */
+function randomizeSelectedColor () {
+    selectedColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
 }
