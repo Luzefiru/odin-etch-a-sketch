@@ -36,18 +36,19 @@ body {
     border: 0.01rem dotted grey;
 }
 
-.button--new-grid,
-.button--color-picker {
-    margin-top: 1rem;
-    margin-right: 1rem;
+.tile-menu {
+    align-self: center;
+}
+
+.tile-menu > button {
+    margin: 1rem 0.2rem 0 0.2rem;
     padding: 0.5rem;
 
     align-self: flex-end;
 }
 
-.button--new-grid > img,
-.button--color-picker > img
- {
+.tile-menu > * > img
+{
     width: 2rem;
-    height: auto;
+    height: 2rem;
 }
