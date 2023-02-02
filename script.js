@@ -32,8 +32,13 @@ function clearCanvas () {
 
 /**
  * Prompts the user to type in a color to be used to paint the tiles.
+ * NOTE: Toggles Rainbow Mode OFF.
  */
 function colorPickerUI () {
+    if (isRainbowMode) {
+        toggleRainbowPen();
+    }
+
     let inputtedColor = prompt('What color do you want to paint with?', 'black');
     changePenColor(inputtedColor);
 }
