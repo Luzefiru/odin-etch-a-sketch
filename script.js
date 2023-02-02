@@ -1,5 +1,5 @@
 const SKETCH_AREA_DIMENSIONS = 16 * 16; // dimensions of the drawing space window, tightly coupled with .window--sketch-area dimensions, not responsive
-let selectedColor = 'rgb(255, 255,255)';
+let selectedColor = 'black'; // the default color of the pen
 let oldSelectedColor = undefined, isRainbowMode = false; // storage variables to toggle on/off rainbow mode in toggleRainbowPen() function
 
 const sketchArea = document.querySelector('.window--sketch-area');
@@ -7,6 +7,8 @@ const newGridButton = document.querySelector('.tile-menu__button--new-grid');
 newGridButton.addEventListener('click', clearCanvas);
 const colorPickerButton = document.querySelector('.tile-menu__button--color-picker');
 colorPickerButton.addEventListener('click', colorPickerUI);
+const rainbowToggleButton = document.querySelector('.tile-menu__button--rainbow-toggle');
+rainbowToggleButton.addEventListener('click', toggleRainbowPen);
 
 /* initialize the canvas grid tiles */
 for (let i = 0; i < SKETCH_AREA_DIMENSIONS; i++)
