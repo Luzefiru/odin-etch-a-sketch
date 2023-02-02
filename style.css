@@ -24,6 +24,23 @@ footer {
     font-weight: 500;
 }
 
+.tile-menu {
+    align-self: center;
+}
+
+.tile-menu > button {
+    margin: 1rem 0.2rem 0 0.2rem;
+    padding: 0.5rem;
+
+    align-self: flex-end;
+}
+
+.tile-menu > button > img
+{
+    width: 2rem;
+    height: 2rem;
+}
+
 .window--sketch-area {
     /* sizing for 16x16 tiles */
     height: 25rem; 
@@ -45,21 +62,4 @@ footer {
     height: 1.5rem;
 
     background-color: whitesmoke;
-}
-
-.tile-menu {
-    align-self: center;
-}
-
-.tile-menu > button {
-    margin: 1rem 0.2rem 0 0.2rem;
-    padding: 0.5rem;
-
-    align-self: flex-end;
-}
-
-.tile-menu > button > img
-{
-    width: 2rem;
-    height: 2rem;
 }
