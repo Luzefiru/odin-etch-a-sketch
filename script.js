@@ -17,8 +17,19 @@ for (let i = 0; i < SKETCH_AREA_DIMENSIONS; i++)
     sketchArea.appendChild(newTile);
 }
 
-/* clears the canvas */
+/**
+ * Clears the canvas.
+ */
 function clearCanvas () {
     const tilesList = document.querySelectorAll('.window--sketch-area__tile');
     tilesList.forEach((e) => e.style.backgroundColor = ''); // reset the backgroundColor to CSS specifications
+}
+
+/**
+ * Changes the behavior of the canvas tiles to have a new specified {color} when hovered.
+ * 
+ * @param {string} color - the specified color to have when you hover on a canvas tile.
+ */
+function changePenColor (color) {
+    selectedColor = color;
 }
