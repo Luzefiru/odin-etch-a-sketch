@@ -36,7 +36,8 @@ body {
     border: 0.01rem dotted grey;
 }
 
-.button--new-grid {
+.button--new-grid,
+.button--color-picker {
     margin-top: 1rem;
     margin-right: 1rem;
     padding: 0.5rem;
@@ -44,7 +45,9 @@ body {
     align-self: flex-end;
 }
 
-.button--new-grid > img {
+.button--new-grid > img,
+.button--color-picker > img
+ {
     width: 2rem;
     height: auto;
 }
