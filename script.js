@@ -27,6 +27,9 @@ function clearCanvas () {
     tilesList.forEach((e) => e.style.backgroundColor = ''); // reset the backgroundColor to CSS specifications
 }
 
+/**
+ * Prompts the user to type in a color to be used to paint the tiles.
+ */
 function colorPickerUI () {
     let inputtedColor = prompt('What color do you want to paint with?', 'black');
     changePenColor(inputtedColor);
